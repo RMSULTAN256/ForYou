@@ -11,9 +11,9 @@
   transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 240px) {
+@media only screen and (min-width: 414px) {
   .Page-Main {
-    width: 50%;
+    visibility: visible;
   }
 
   .Envlope {
