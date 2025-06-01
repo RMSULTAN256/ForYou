@@ -1,27 +1,19 @@
-.Page-Main {
+
+/* Mobile */
+@media (min-width: 600px) {
+  .Page-Main {
   background-color: #faeeee;
   max-width: max-content;
   max-height: max-content;
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
 }
-
-.Envlope {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  height: 40%;
-}
-
-@media only screen and (min-width: 600px) {
-  .Page-Main {
-    visibility: visible;
-  }
-
   .Envlope {
     visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
