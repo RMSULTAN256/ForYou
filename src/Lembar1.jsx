@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef} from "react";
+import React, { useEffect, useState } from "react";
 
 function Lembar1() {
 
@@ -10,14 +10,6 @@ function Lembar1() {
     const [displayedText, setDisplayedText] = useState("");
     const [imageUrl, setImageUrl] = useState(null);
     const [ImgAccepted, setImgAccepted] = useState("");
-    
-    const audioRef = useRef(null);
-
-    useEffect(() => {
-        if (isFinal && audioRef.current) {
-            audioRef.current.play();
-        }
-    }, [isFinal]);
 
     useEffect(() => {
         let index = 0;
@@ -42,12 +34,6 @@ function Lembar1() {
             setText("Dengan ini kita resmi jadian ya, sayangku~💘. Anjay😏");
             setIsFinal(true);
             setImgAccepted("https://i.pinimg.com/736x/df/9f/90/df9f905f30a3dca60d24acdedef3ef2c.jpg");
-
-            if (audioRef.current) {
-                audioRef.current.play().catch(err => {
-                    console.error("Audio playback failed:", err);
-                });
-            }
         }
     };
 
@@ -154,10 +140,7 @@ function Lembar1() {
                 )}
             </div>
         </div>
-        <audio ref={audioRef} src={`${import.meta.env.BASE_URL}audio/marry.mp3`} preload="auto" loop />
-        
         </>
-        
     )
 }
 
